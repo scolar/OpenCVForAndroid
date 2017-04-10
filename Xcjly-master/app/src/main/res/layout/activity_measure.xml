@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_height"
+        android:background="#ff6461">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/activity_title_height"
+            android:layout_height="@dimen/activity_title_height"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:background="@null"
+            android:src="@mipmap/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="测量"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:text="测点"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/parent1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.leador.TV.Measure.TrueVisionMeasure
+            android:id="@+id/ldmeasuretv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!--  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.leador.TV.Measure.TrueVisionMeasure
+            android:id="@+id/ldmeasuretv2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:textSize="13dp"
+        android:layout_marginLeft="10dp" />
+
+</LinearLayout>
